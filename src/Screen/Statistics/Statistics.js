@@ -34,6 +34,7 @@ function Statistics({ language }) {
     const [facultet23, setFacultet23] = useState(0)
     const [facultet24, setFacultet24] = useState(0)
     const [facultet25, setFacultet25] = useState(0)
+
     const [obj, setObj] = useState({
         degree: "",
         country: "",
@@ -272,7 +273,7 @@ function Statistics({ language }) {
     return (
         <div className='root_page'>
             <AdminHeader />
-           
+
             <div className="left_spaced statistics">
                 <Card title="Abiturientlar soni" style={{ width: 300 }}>
                     <p>{allStudents1?.length}</p>
@@ -302,10 +303,10 @@ function Statistics({ language }) {
                         <td rowspan="4">Беларусь Республикаси, Белоруссия давлат озиқ-овқат ва кимёвий технологиялар университети</td>
                         <td >Технологик машиналар ва жиҳозлар (тармоқлар бўйича)</td>
                         <td >{`-`}</td>
-                        
+
                     </tr>
                     <tr>
-                        
+
                         <td>Озиқ-овқат технологияси (нон, макарон ва қандолатчилик маҳсулотлари)</td>
                         <td >{`${facultet1}`}</td>
                     </tr>
@@ -317,7 +318,7 @@ function Statistics({ language }) {
                     <tr>
                         <td>Технологик машиналар ва жиҳозлар(совутиш, криоген техникаси ва мўътадиллаш тизимлари машиналари ҳамда агрегатлари)</td>
                         <td >{`${facultet4}`}</td>
-                        
+
                     </tr>
 
                     {/* 2 */}
@@ -358,14 +359,14 @@ function Statistics({ language }) {
                         <td>Нефть ва газ қувурлари, база ва омборларини қуриш ва улардан фойдаланиш</td>
                         <td >{`${facultet12}`}</td>
                     </tr>
-                  
+
                     {/* 4 */}
                     <tr>
                         <td rowspan="1">Беларусь Республикаси, Янка Купала номидаги Гродно давлат университети</td>
                         <td >Менежмент (озиқ-овқат ва кимё саноати)</td>
                         <td >{`${facultet13}`}</td>
                     </tr>
-                    
+
                     {/* 5 */}
                     <tr>
                         <td rowspan="3">Россия Федерацияси, Қозон (Волгабўйи) Федерал университети</td>
@@ -398,7 +399,7 @@ function Statistics({ language }) {
                         <td >{`${facultet16}`}</td>
                     </tr>
                     <span className='table__magstr'>Магистратура </span>
-                    
+
                     <tr>
                         <td rowspan="3">Беларусь Республикаси,
                             Белоруссия давлат технология университети</td>
@@ -449,7 +450,7 @@ function Statistics({ language }) {
                         <td >{`${facultet5}`}</td>
                     </tr>
 
-                   
+
                 </table>
                 <div className="content_wrapper1">
                     <div className="width1001">

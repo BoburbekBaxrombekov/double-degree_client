@@ -84,7 +84,9 @@ const Test = ({language, setUserName}) => {
         send,
         location,
         country1,
-        country2
+        country2,
+        day,
+        night
     } = Ariza
 
     const selectRegion = [
@@ -190,30 +192,30 @@ const Test = ({language, setUserName}) => {
                         </Form.Item>
 
                         <Form.Item name={'phone_number'} label={phone[language]}>
-                        <NumberFormat
-                                    className="form-control add-patients__input"
-                                    placeholder={ +998}
-                                    
-                                    format="+998(##)###-##-##"
-                                    mask={"_"}
-                                    required
-                                />
+                            <NumberFormat
+                                className="form-control add-patients__input"
+                                placeholder={+998}
+
+                                format="+998(##)###-##-##"
+                                mask={"_"}
+                                required
+                            />
                         </Form.Item>
 
                         <Form.Item name={'passport_seria_number'} label={passportS[language]}>
-                        <Input type="text"
-                                name="passport"
-                                placeholder="AA1234567"
+                            <Input type="text"
+                                   name="passport"
+                                   placeholder="AA1234567"
 
-                                minLength={9}
-                                maxLength={9}
-                                className="form-control add-patients__input"  required/>
+                                   minLength={9}
+                                   maxLength={9}
+                                   className="form-control add-patients__input" required/>
                         </Form.Item>
 
                         <Form.Item name={'passport_jshir'} label={passport[language]}>
-                        <NumberFormat
+                            <NumberFormat
                                 className="form-control add-patients__input"
-                                placeholder={ 123456789012}
+                                placeholder={123456789012}
 
                                 format="##############"
                                 mask={"_"}
@@ -428,8 +430,21 @@ const Test = ({language, setUserName}) => {
                                 }
                             </Select>
                         </Form.Item>
-
-
+                        <Form.Item rules={[
+                            {
+                                required: true,
+                                message: form[language]
+                            },
+                        ]} name={'study_type'} label={form[language]}>
+                            <Select onChange={(e) => setTypeFaculty(e)}>
+                                <Select.Option value="day">
+                                    {day[language]}
+                                </Select.Option>
+                                <Select.Option value="night">
+                                    {night[language]}
+                                </Select.Option>
+                            </Select>
+                        </Form.Item>
                         <Form.Item rules={[
                             {
                                 required: true,
@@ -446,13 +461,13 @@ const Test = ({language, setUserName}) => {
                                 {
                                     language === 0 ?
                                         (typeEducation === "master" &&
-                                            listData[0]["master"].find(l => l.country_uz === obj?.country)?.universities?.find(u => u.name_uz === obj?.university)?.faculties?.map(p => {
+                                            listData[0]["master"].find(l => l.country_uz === obj?.country)?.universities?.find(u => u.name_uz === obj?.university)?.facs?.[typeFaculty]?.map(p => {
                                                 return (
                                                     <option value={p?.name_uz}>{p?.name_uz}</option>
                                                 )
                                             })) :
                                         (typeEducation === "master" &&
-                                            listData[0]["master"].find(l => l.country_ru === obj?.country)?.universities?.find(u => u.name_ru === obj?.university)?.faculties?.map(p => {
+                                            listData[0]["master"].find(l => l.country_ru === obj?.country)?.universities?.find(u => u.name_ru === obj?.university)?.facs?.[typeFaculty]?.map(p => {
                                                 return (
                                                     <option value={p?.name_ru}>{p?.name_ru}</option>
                                                 )
@@ -461,13 +476,13 @@ const Test = ({language, setUserName}) => {
                                 {
                                     language === 0 ?
                                         (typeEducation === "bachelor" &&
-                                            listData[0]["bachelor"].find(l => l.country_uz === obj?.country)?.universities?.find(u => u.name_uz === obj?.university)?.faculties?.map(p => {
+                                            listData[0]["bachelor"].find(l => l.country_uz === obj?.country)?.universities?.find(u => u.name_uz === obj?.university)?.facs?.[typeFaculty]?.map(p => {
                                                 return (
                                                     <option value={p?.name_uz}>{p?.name_uz}</option>
                                                 )
                                             })) :
                                         (typeEducation === "bachelor" &&
-                                            listData[0]["bachelor"].find(l => l.country_ru === obj?.country)?.universities?.find(u => u.name_ru === obj?.university)?.faculties?.map(p => {
+                                            listData[0]["bachelor"].find(l => l.country_ru === obj?.country)?.universities?.find(u => u.name_ru === obj?.university)?.facs?.[typeFaculty]?.map(p => {
                                                 return (
                                                     <option value={p?.name_ru}>{p?.name_ru}</option>
                                                 )
@@ -485,34 +500,13 @@ const Test = ({language, setUserName}) => {
                                 {
                                     language === 0 ?
                                         <Select.Option value={
-                                            listData[0][typeEducation]?.find(l => l.country_uz === obj?.country)?.universities?.find(u => u.name_uz === obj?.university)?.faculties?.find(p => p.name_uz === obj.faculty)?.lang_uz}>
-                                            {listData[0][typeEducation]?.find(l => l.country_uz === obj?.country)?.universities?.find(u => u.name_uz === obj?.university)?.faculties?.find(p => p.name_uz === obj.faculty)?.lang_uz}
+                                            listData[0][typeEducation]?.find(l => l.country_uz === obj?.country)?.universities?.find(u => u.name_uz === obj?.university)?.facs?.[typeFaculty]?.find(p => p.name_uz === obj.faculty)?.lang_uz}>
+                                            {listData[0][typeEducation]?.find(l => l.country_uz === obj?.country)?.universities?.find(u => u.name_uz === obj?.university)?.facs?.[typeFaculty]?.find(p => p.name_uz === obj.faculty)?.lang_uz}
                                         </Select.Option>
                                         :
                                         <Select.Option value={
-                                            listData[0][typeEducation]?.find(l => l.country_ru === obj?.country)?.universities?.find(u => u.name_ru === obj?.university)?.faculties?.find(p => p.name_ru === obj.faculty)?.lang_ru}>
-                                            {listData[0][typeEducation]?.find(l => l.country_ru === obj?.country)?.universities?.find(u => u.name_ru === obj?.university)?.faculties?.find(p => p.name_ru === obj.faculty)?.lang_ru}
-                                        </Select.Option>
-                                }
-                            </Select>
-                        </Form.Item>
-                        <Form.Item rules={[
-                            {
-                                required: true,
-                                message: form[language]
-                            },
-                        ]} name={'study_type'} label={form[language]}>
-                            <Select onChange={(e) => setTypeFaculty(e)}>
-                                {
-                                    language === 0 ?
-                                        <Select.Option value={
-                                            listData[0][typeEducation]?.find(l => l.country_uz === obj?.country)?.universities?.find(u => u.name_uz === obj?.university)?.faculties?.find(p => p.name_uz === obj.faculty)?.time_uz}>
-                                            {listData[0][typeEducation]?.find(l => l.country_uz === obj?.country)?.universities?.find(u => u.name_uz === obj?.university)?.faculties?.find(p => p.name_uz === obj.faculty)?.time_uz}
-                                        </Select.Option>
-                                        :
-                                        <Select.Option value={
-                                            listData[0][typeEducation]?.find(l => l.country_ru === obj?.country)?.universities?.find(u => u.name_ru === obj?.university)?.faculties?.find(p => p.name_ru === obj.faculty)?.time_ru}>
-                                            {listData[0][typeEducation]?.find(l => l.country_ru === obj?.country)?.universities?.find(u => u.name_ru === obj?.university)?.faculties?.find(p => p.name_ru === obj.faculty)?.time_ru}
+                                            listData[0][typeEducation]?.find(l => l.country_ru === obj?.country)?.universities?.find(u => u.name_ru === obj?.university)?.facs?.[typeFaculty]?.find(p => p.name_ru === obj.faculty)?.lang_ru}>
+                                            {listData[0][typeEducation]?.find(l => l.country_ru === obj?.country)?.universities?.find(u => u.name_ru === obj?.university)?.facs?.[typeFaculty]?.find(p => p.name_ru === obj.faculty)?.lang_ru}
                                         </Select.Option>
                                 }
                             </Select>

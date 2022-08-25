@@ -13,6 +13,60 @@ export const listData = [
                             name_ru: "Белорусский государственный университет пищевых и химических технологий, Республика Беларусь",
                             bino: 1,
                             smena: 1,
+                            facs: {
+                                day: [
+                                    {
+                                        guruh: 1,
+                                        name_uz: "Oziq-ovqat texnologiyasi (non, makaron va qandolatchilik mahsulotlari)",
+                                        name_ru: "Пищевая технология (хлеб, макаронные и кондитерские изделия)",
+                                        subjects_uz: ["Kimyo", "Matematika", "Rus tili"],
+                                        subjects_ru: ["Химия», «Математика», «Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                    },
+                                    {
+                                        guruh: 2,
+                                        name_uz: "Texnologik mashinalar va jihozlar (tarmoqlar boʼyicha)",
+                                        name_ru: "Технологические машины и оборудование (по сетям)",
+                                        subjects_uz: ["Matematika", "Fizika", "Rus tili"],
+                                        subjects_ru: ["Математика", "Физика", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                    },
+                                ],
+                                night: [
+                                    {
+                                        guruh: 1,
+                                        name_uz: "Oziq-ovqat texnologiyasi (non, makaron va qandolatchilik mahsulotlari)",
+                                        name_ru: "Пищевая технология (хлеб, макаронные и кондитерские изделия)",
+                                        subjects_uz: ["Kimyo", "Matematika", "Rus tili"],
+                                        subjects_ru: ["Химия», «Математика», «Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время',
+                                    },
+                                    {
+                                        guruh: 2,
+                                        name_uz: "Texnologik mashinalar va jihozlar (tarmoqlar boʼyicha)",
+                                        name_ru: "Технологические машины и оборудование (по сетям)",
+                                        subjects_uz: ["Matematika", "Fizika", "Rus tili"],
+                                        subjects_ru: ["Математика", "Физика", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    },
+                                ]
+                            },
                             faculties: [
                                 {
                                     guruh: 1,
@@ -23,9 +77,9 @@ export const listData = [
                                     lang_ru: "Русский",
                                     lang_uz: "Rus tili",
                                     training_ru: "очное обучение",
-                                    training_uz: "кундузги", 
+                                    training_uz: "кундузги",
                                     time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
+                                    time_ru: 'Дневное время',
                                 },
                                 {
                                     guruh: 2,
@@ -36,7 +90,7 @@ export const listData = [
                                     lang_ru: "Русский",
                                     lang_uz: "Rus tili",
                                     training_ru: "очное обучение",
-                                    training_uz: "кундузги", 
+                                    training_uz: "кундузги",
                                     time_uz: 'Kunduzgi',
                                     time_ru: 'Дневное время'
 
@@ -50,7 +104,7 @@ export const listData = [
                                     lang_ru: "Русский",
                                     lang_uz: "Rus tili",
                                     training_ru: "очное обучение",
-                                    training_uz: "кундузги", 
+                                    training_uz: "кундузги",
                                     time_uz: 'Sirtqi',
                                     time_ru: 'Внешне'
                                 },
@@ -64,7 +118,7 @@ export const listData = [
                                     lang_ru: "Русский",
                                     lang_uz: "Rus tili",
                                     training_ru: "очное обучение",
-                                    training_uz: "кундузги", 
+                                    training_uz: "кундузги",
                                     time_uz: 'Sirtqi',
                                     time_ru: 'Внешне'
                                 }
@@ -103,7 +157,7 @@ export const listData = [
                                     time_uz: 'Kunduzgi',
                                     time_ru: 'Дневное время'
                                 },
-                                { 
+                                {
                                     //sirtqi
                                     guruh: 3,
                                     name_uz: "Texnologik mashinalar va jihozlar (tarmoqlar boʼyicha)",
@@ -118,7 +172,7 @@ export const listData = [
                                     time_ru: 'Внешне'
                                 },
                                 {
-                                     //sirtqi
+                                    //sirtqi
                                     guruh: 4,
                                     name_uz: "Kimyoviy texnologiya (ishlab chiqarish turlari boʼyicha)",
                                     name_ru: "Химическая технология (по видам производства)",
@@ -132,7 +186,7 @@ export const listData = [
                                     time_ru: 'Внешне'
                                 },
                                 {
-                                     //sirtqi
+                                    //sirtqi
                                     guruh: 5,
                                     name_uz: "Texnologik jarayonlar va ishlab chiqarishni avtomatlashtirish va boshqarish (tarmoqlar boʼyicha)",
                                     name_ru: "Автоматизация и управление технологическими процессами и производством (по сетям)",
@@ -220,7 +274,7 @@ export const listData = [
                         }
                     ]
             },
-           
+
             {
                 id: 3,
                 country_uz: "Latviya Respublikasi",
