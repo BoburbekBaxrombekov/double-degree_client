@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import AdminHeader from "../../Components/admin_header/admin_header";
-import { Card } from 'antd';
-import { MainApi } from "../../services/api";
+import {Card} from 'antd';
+import {MainApi} from "../../services/api";
 import studentImg from "../../student.png";
-import { listData } from "../../utils/data";
+import {listData} from "../../utils/data";
+import {Ariza} from "../../Components/Language";
 
-function Statistics({ language }) {
+function Statistics({language}) {
     const [allStudents, setAllStudents] = useState([])
     const [allStudents1, setAllStudents1] = useState([])
     const [tolov, setTolov] = useState(0)
@@ -39,10 +40,10 @@ function Statistics({ language }) {
         degree: "",
         country: "",
         university: "",
-        faculty: ""
+        faculty: "",
+        smena: ""
     })
     const [chosen, setChosen] = useState(0)
-
 
 
     const handleDefine = () => {
@@ -270,24 +271,30 @@ function Statistics({ language }) {
                 setFacultet25(data?.total)
             });
     }, [])
+
+    const {
+        day,
+        night
+    } = Ariza
+
     return (
         <div className='root_page'>
-            <AdminHeader />
+            <AdminHeader/>
 
             <div className="left_spaced statistics">
-                <Card title="Abiturientlar soni" style={{ width: 300 }}>
+                <Card title="Abiturientlar soni" style={{width: 300}}>
                     <p>{allStudents1?.length}</p>
                 </Card>
-                <Card title="To'lovlar soni" style={{ width: 300 }}>
+                <Card title="To'lovlar soni" style={{width: 300}}>
                     <p>{tolov}</p>
                 </Card>
-                <Card title="Tanlovga mos abiturientlar" style={{ width: 300 }}>
+                <Card title="Tanlovga mos abiturientlar" style={{width: 300}}>
                     <p>{allStudents?.length}</p>
                 </Card>
             </div>
             <div className="container2">
                 <div className="statistics_result">
-                    <img src={studentImg} alt="img" width="80px" />
+                    <img src={studentImg} alt="img" width="80px"/>
                     <h2>{(chosen > 0 &&
                         (!!obj?.degree || !!obj?.country || !!obj?.university || !!obj?.faculty)) ? allStudents?.length : 0} ta
                         talaba ro'yxatdan o'tgan</h2>
@@ -295,159 +302,170 @@ function Statistics({ language }) {
                 <table border="2" className='statistic__table'>
                     <span className='table__magstr'>Бакалавриат</span>
                     <tr>
-                        <th >Ҳамкор хорижий олий таълим муассасаси номи</th>
+                        <th>Ҳамкор хорижий олий таълим муассасаси номи</th>
                         <th>Таълим йўналишлари ва мутахассисликлар номи</th>
                         <th>Таълим йўналишлари ва мутахассисликларга тушган аризалар сони</th>
                     </tr>
                     <tr>
-                        <td rowspan="4">Беларусь Республикаси, Белоруссия давлат озиқ-овқат ва кимёвий технологиялар университети</td>
-                        <td >Технологик машиналар ва жиҳозлар (тармоқлар бўйича)</td>
-                        <td >{`-`}</td>
+                        <td rowspan="4">Беларусь Республикаси, Белоруссия давлат озиқ-овқат ва кимёвий технологиялар
+                            университети
+                        </td>
+                        <td>Технологик машиналар ва жиҳозлар (тармоқлар бўйича)</td>
+                        <td>{`-`}</td>
 
                     </tr>
                     <tr>
 
                         <td>Озиқ-овқат технологияси (нон, макарон ва қандолатчилик маҳсулотлари)</td>
-                        <td >{`${facultet1}`}</td>
+                        <td>{`${facultet1}`}</td>
                     </tr>
                     <tr>
                         <td>Озиқ-овқат технологияси (дон маҳсулотлари)</td>
-                        <td >{`${facultet3}`}</td>
+                        <td>{`${facultet3}`}</td>
 
                     </tr>
                     <tr>
-                        <td>Технологик машиналар ва жиҳозлар(совутиш, криоген техникаси ва мўътадиллаш тизимлари машиналари ҳамда агрегатлари)</td>
-                        <td >{`${facultet4}`}</td>
+                        <td>Технологик машиналар ва жиҳозлар(совутиш, криоген техникаси ва мўътадиллаш тизимлари
+                            машиналари ҳамда агрегатлари)
+                        </td>
+                        <td>{`${facultet4}`}</td>
 
                     </tr>
 
                     {/* 2 */}
                     <tr>
                         <td rowspan="5">Беларусь Республикаси, Белоруссия давлат технология университети</td>
-                        <td >Технологик машиналар ва жиҳозлар (тармоқлар бўйича)</td>
-                        <td >{`${facultet2}`}</td>
+                        <td>Технологик машиналар ва жиҳозлар (тармоқлар бўйича)</td>
+                        <td>{`${facultet2}`}</td>
                     </tr>
                     <tr>
                         <td>Кимёвий технология (қурилиш материаллар)</td>
-                        <td >{`${facultet6}`}</td>
+                        <td>{`${facultet6}`}</td>
                     </tr>
                     <tr>
-                        <td>Технологик машиналар ва жиҳозлар (тармоқлар бўйича) </td>
-                        <td >{`${facultet4}`}</td>
+                        <td>Технологик машиналар ва жиҳозлар (тармоқлар бўйича)</td>
+                        <td>{`${facultet4}`}</td>
                     </tr>
                     <tr>
-                        <td>Кимёвий технология (ишлаб чиқариш турлари бўйича) </td>
-                        <td >{`${facultet8}`}</td>
+                        <td>Кимёвий технология (ишлаб чиқариш турлари бўйича)</td>
+                        <td>{`${facultet8}`}</td>
                     </tr>
                     <tr>
-                        <td>Технологик жараёнлар ва ишлаб чиқаришни автоматлаштириш ва бошқариш (тармоқлар бўйича) </td>
-                        <td >{`${facultet9}`}</td>
+                        <td>Технологик жараёнлар ва ишлаб чиқаришни автоматлаштириш ва бошқариш (тармоқлар бўйича)</td>
+                        <td>{`${facultet9}`}</td>
 
                     </tr>
                     {/* 3 */}
                     <tr>
                         <td rowspan="3">Беларусь Республикаси, Полоцк давлат университети</td>
-                        <td >Машинасозлик технологияси, машинасозлик ишлаб чиқаришини жиҳозлаш ва автоматлаштириш  </td>
-                        <td >{`${facultet10}`}</td>
+                        <td>Машинасозлик технологияси, машинасозлик ишлаб чиқаришини жиҳозлаш ва автоматлаштириш</td>
+                        <td>{`${facultet10}`}</td>
                     </tr>
                     <tr>
 
                         <td>Нефть ва нефть-газни қайта ишлаш технологияси</td>
-                        <td >{`${facultet11}`}</td>
+                        <td>{`${facultet11}`}</td>
                     </tr>
                     <tr>
                         <td>Нефть ва газ қувурлари, база ва омборларини қуриш ва улардан фойдаланиш</td>
-                        <td >{`${facultet12}`}</td>
+                        <td>{`${facultet12}`}</td>
                     </tr>
 
                     {/* 4 */}
                     <tr>
                         <td rowspan="1">Беларусь Республикаси, Янка Купала номидаги Гродно давлат университети</td>
-                        <td >Менежмент (озиқ-овқат ва кимё саноати)</td>
-                        <td >{`${facultet13}`}</td>
+                        <td>Менежмент (озиқ-овқат ва кимё саноати)</td>
+                        <td>{`${facultet13}`}</td>
                     </tr>
 
                     {/* 5 */}
                     <tr>
                         <td rowspan="3">Россия Федерацияси, Қозон (Волгабўйи) Федерал университети</td>
                         <td>Мехатроника ва робототехника</td>
-                        <td >{`${facultet11}`}</td>
+                        <td>{`${facultet11}`}</td>
                     </tr>
                     <tr>
 
                         <td>Материалшунослик ва янги материаллар технологияси (тармоқлар бўйича)</td>
-                        <td >{`${facultet12}`}</td>
+                        <td>{`${facultet12}`}</td>
                     </tr>
                     <tr>
                         <td>Технологик жараёнлар ва ишлаб чиқаришни автоматлаштириш ва бошқариш (тармоқлар буйича)</td>
-                        <td >{`${facultet13}`}</td>
+                        <td>{`${facultet13}`}</td>
                     </tr>
-                {/* 6 */}
+                    {/* 6 */}
                     <tr>
-                        <td rowspan="1">Латвия республикаси, Латвия табиий фанлар ва технология университети </td>
-                        <td >Озиқ-овқат технологияси (маҳсулот турлари бўйича)</td>
-                        <td >{`${facultet14}`}</td>
+                        <td rowspan="1">Латвия республикаси, Латвия табиий фанлар ва технология университети</td>
+                        <td>Озиқ-овқат технологияси (маҳсулот турлари бўйича)</td>
+                        <td>{`${facultet14}`}</td>
                     </tr>
                     {/* 7 */}
                     <tr>
-                        <td rowspan="2">Туркия, Остим техника университети </td>
+                        <td rowspan="2">Туркия, Остим техника университети</td>
                         <td>Материалшунослик ва янги материаллар технологияси (тармоқлар бўйича)»</td>
-                        <td >{`${facultet15}`}</td>
+                        <td>{`${facultet15}`}</td>
                     </tr>
                     <tr>
                         <td>Технологик жараёнларни бошқаришнинг ахборот – коммуникация тизимлари</td>
-                        <td >{`${facultet16}`}</td>
+                        <td>{`${facultet16}`}</td>
                     </tr>
                     <span className='table__magstr'>Магистратура </span>
 
                     <tr>
                         <td rowspan="3">Беларусь Республикаси,
-                            Белоруссия давлат технология университети</td>
+                            Белоруссия давлат технология университети
+                        </td>
                         <td>Кимёвий технология жараёнлари ва аппаратлари (ишлаб чиқариш тури бўйича)</td>
-                        <td >{`${facultet17}`}</td>
+                        <td>{`${facultet17}`}</td>
                     </tr>
                     <tr>
                         <td>Ёғочга ишлов бериш технологияси ва ёғочшунослик</td>
-                        <td >{`${facultet18}`}</td>
+                        <td>{`${facultet18}`}</td>
                     </tr>
                     <tr>
                         <td>Кимёвий технология(силикат ва қийин эрийдиган нометалл материаллар)</td>
-                        <td >{`${facultet19}`}</td>
+                        <td>{`${facultet19}`}</td>
                     </tr>
                     {/* 2 */}
                     <tr>
-                        <td rowspan="2">Беларусь Республикаси, Белоруссия давлат озиқ-овқат ва кимёвий технология университети</td>
-                        <td>Озиқ-овқат маҳсулотларини ишлаб чиқариш ва қайта ишлаш технологияси (маҳсулот турлари бўйича)</td>
-                        <td >{`${facultet20}`}</td>
+                        <td rowspan="2">Беларусь Республикаси, Белоруссия давлат озиқ-овқат ва кимёвий технология
+                            университети
+                        </td>
+                        <td>Озиқ-овқат маҳсулотларини ишлаб чиқариш ва қайта ишлаш технологияси (маҳсулот турлари
+                            бўйича)
+                        </td>
+                        <td>{`${facultet20}`}</td>
                     </tr>
                     <tr>
                         <td>Озиқ-овқат саноати машиналари ва агрегатлари</td>
-                        <td >{`${facultet21}`}</td>
+                        <td>{`${facultet21}`}</td>
                     </tr>
                     {/* 3 */}
                     <tr>
                         <td rowspan="2">Беларусь Республикаси, Полоцк давлат университети</td>
-                        <td>Нефт ва газни қайта ишлаш ва кимёвий технологияси </td>
-                        <td >{`${facultet22}`}</td>
+                        <td>Нефт ва газни қайта ишлаш ва кимёвий технологияси</td>
+                        <td>{`${facultet22}`}</td>
                     </tr>
                     <tr>
                         <td>Нефть ва газ қувурлари, база ва омборларини қуриш ва улардан фойдаланиш</td>
-                        <td >{`${facultet23}`}</td>
+                        <td>{`${facultet23}`}</td>
                     </tr>
                     <tr>
-                        <td rowspan="1">Туркия, Остим техника университети </td>
+                        <td rowspan="1">Туркия, Остим техника университети</td>
                         <td>Технологик жараёнлар ва ишлаб чиқаришни автоматлаштириш (тармоқлар бўйича)</td>
-                        <td >{`${facultet24}`}</td>
+                        <td>{`${facultet24}`}</td>
                     </tr>
                     <tr>
-                        <td rowspan="1">Венгрия, Дебрецен университети </td>
+                        <td rowspan="1">Венгрия, Дебрецен университети</td>
                         <td>Озиқ-овқат хавфсизлиги ва сифати</td>
-                        <td >{`${facultet25}`}</td>
+                        <td>{`${facultet25}`}</td>
                     </tr>
                     <tr>
-                        <td rowspan="1">Латвия республикаси, Латвия табиий фанлар ва технология университети  </td>
-                        <td>Озиқ-овқат маҳсулотларини ишлаб чиқариш ва қайта ишлаш технологияси (маҳсулот турлари бўйича)</td>
-                        <td >{`${facultet5}`}</td>
+                        <td rowspan="1">Латвия республикаси, Латвия табиий фанлар ва технология университети</td>
+                        <td>Озиқ-овқат маҳсулотларини ишлаб чиқариш ва қайта ишлаш технологияси (маҳсулот турлари
+                            бўйича)
+                        </td>
+                        <td>{`${facultet5}`}</td>
                     </tr>
 
 
@@ -572,7 +590,27 @@ function Statistics({ language }) {
                             }
                         </select>
                     </div>
-
+                    <div className="width1001">
+                        <label>
+                            Talim smenasini tanlang:
+                        </label>
+                        <select onChange={(e) =>
+                            setObj({
+                                ...obj,
+                                smena: e.target.value,
+                            })
+                        }
+                                className="width100"
+                        >
+                            <option value=""></option>
+                            <option value="day">
+                                {day[language]}
+                            </option>
+                            <option value="night">
+                                {night[language]}
+                            </option>
+                        </select>
+                    </div>
                     <div className="width1001">
                         <label>
                             Talim yo'nalishni tanlang:
@@ -589,34 +627,14 @@ function Statistics({ language }) {
                             {
                                 language === 0 ?
                                     (
-                                        obj?.degree === "master" &&
-                                        listData[0]["master"].find(l => l.country_uz === obj?.country)?.universities?.find(u => u.training_uz === obj?.university)?.faculties?.map(p => {
-                                            return (
-                                                <option value={p?.training_uz}>{p?.training_uz}</option>
-                                            )
-                                        })
-                                    )
-                                    :
-                                    obj?.degree === "master" &&
-                                    listData[0]["master"].find(l => l.country_ru === obj?.country)?.universities?.find(u => u.training_ru === obj?.university)?.faculties?.map(p => {
-                                        return (
-                                            <option value={p?.training_ru}>{p?.training_ru}</option>
-                                        )
-                                    })
-                            }
-                            {
-                                language === 0 ?
-                                    (
-                                        obj?.degree === "bachelor" &&
-                                        listData[0]["bachelor"].find(l => l.country_uz === obj?.country)?.universities?.find(u => u.name_uz === obj?.university)?.faculties?.map(p => {
+                                        listData[0]?.[obj.degree]?.find(l => l.country_uz === obj?.country)?.universities?.find(u => u.name_uz === obj?.university)?.facs?.[obj?.smena]?.map(p => {
                                             return (
                                                 <option value={p?.name_uz}>{p?.name_uz}</option>
                                             )
                                         })
                                     )
                                     :
-                                    obj?.degree === "bachelor" &&
-                                    listData[0]["bachelor"].find(l => l.country_ru === obj?.country)?.universities?.find(u => u.name_ru === obj?.university)?.faculties?.map(p => {
+                                    listData[0]?.[obj.degree]?.find(l => l.country_ru === obj?.country)?.universities?.find(u => u.name_ru === obj?.university)?.facs?.[obj?.smena]?.map(p => {
                                         return (
                                             <option value={p?.name_ru}>{p?.name_ru}</option>
                                         )
@@ -641,34 +659,14 @@ function Statistics({ language }) {
                             {
                                 language === 0 ?
                                     (
-                                        obj?.degree === "master" &&
-                                        listData[0]["master"].find(l => l.country_uz === obj?.country)?.universities?.find(u => u.name_uz === obj?.university)?.faculties?.map(p => {
+                                        listData[0]?.[obj.degree]?.find(l => l.country_uz === obj?.country)?.universities?.find(u => u.training_uz === obj?.university)?.facs?.[obj?.smena]?.map(p => {
                                             return (
                                                 <option value={p?.name_uz}>{p?.name_uz}</option>
                                             )
                                         })
                                     )
                                     :
-                                    obj?.degree === "master" &&
-                                    listData[0]["master"].find(l => l.country_ru === obj?.country)?.universities?.find(u => u.name_ru === obj?.university)?.faculties?.map(p => {
-                                        return (
-                                            <option value={p?.name_ru}>{p?.name_ru}</option>
-                                        )
-                                    })
-                            }
-                            {
-                                language === 0 ?
-                                    (
-                                        obj?.degree === "bachelor" &&
-                                        listData[0]["bachelor"].find(l => l.country_uz === obj?.country)?.universities?.find(u => u.name_uz === obj?.university)?.faculties?.map(p => {
-                                            return (
-                                                <option value={p?.name_uz}>{p?.name_uz}</option>
-                                            )
-                                        })
-                                    )
-                                    :
-                                    obj?.degree === "bachelor" &&
-                                    listData[0]["bachelor"].find(l => l.country_ru === obj?.country)?.universities?.find(u => u.name_ru === obj?.university)?.faculties?.map(p => {
+                                    listData[0]?.[obj.degree]?.find(l => l.country_ru === obj?.country)?.universities?.find(u => u.training_ru === obj?.university)?.facs?.[obj?.smena]?.map(p => {
                                         return (
                                             <option value={p?.name_ru}>{p?.name_ru}</option>
                                         )
@@ -676,7 +674,7 @@ function Statistics({ language }) {
                             }
                         </select>
                     </div>
-                    <br />
+                    <br/>
                 </div>
                 <div>
                     <button onClick={() => handleDefine()}>Aniqlash</button>

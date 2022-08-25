@@ -43,6 +43,8 @@ const PDF = forwardRef(({pdf, type, language, user}, ref) => {
         genderMale,
         genderWoman,
         send,
+        day,
+        night
     } = Ariza;
 
     useEffect(() => {
@@ -57,16 +59,17 @@ const PDF = forwardRef(({pdf, type, language, user}, ref) => {
 
     useEffect(() => {
         if (!!user && language === 0) {
-            setSubjects(listData[0][user?.study_level]?.find(i => i.country_uz === user?.country)?.universities.find(y => y.name_uz === user?.university)?.faculties.find(x => x?.name_uz === user?.facultet)?.subjects_uz)
+            setSubjects(listData[0][user?.study_level]?.find(i => i.country_uz === user?.country)?.universities.find(y => y.name_uz === user?.university)?.facs?.[user?.study_type]?.find(x => x?.name_uz === user?.facultet)?.subjects_uz)
             setSmena(listData[0][user?.study_level]?.find(i => i.country_uz === user?.country)?.universities.find(y => y.name_uz === user?.university)?.smena)
             setBino(listData[0][user?.study_level]?.find(i => i.country_uz === user?.country)?.universities.find(y => y.name_uz === user?.university)?.bino)
-            setGuruh(listData[0][user?.study_level]?.find(i => i.country_uz === user?.country)?.universities.find(y => y.name_uz === user?.university)?.faculties.find(x => x?.name_uz === user?.facultet)?.guruh)
+            setGuruh(listData[0][user?.study_level]?.find(i => i.country_uz === user?.country)?.universities.find(y => y.name_uz === user?.university)?.facs?.[user?.study_type]?.find(x => x?.name_uz === user?.facultet)?.guruh)
         }
+
         if (!!user && language === 1) {
-            setSubjects(listData[0][user?.study_level]?.find(i => i.country_ru === user?.country)?.universities.find(y => y.name_ru === user?.university)?.faculties.find(x => x?.name_ru === user?.facultet)?.subjects_ru)
+            setSubjects(listData[0][user?.study_level]?.find(i => i.country_ru === user?.country)?.universities.find(y => y.name_ru === user?.university)?.facs?.[user?.study_type]?.find(x => x?.name_ru === user?.facultet)?.subjects_ru)
             setSmena(listData[0][user?.study_level]?.find(i => i.country_ru === user?.country)?.universities.find(y => y.name_ru === user?.university)?.smena)
             setBino(listData[0][user?.study_level]?.find(i => i.country_ru === user?.country)?.universities.find(y => y.name_ru === user?.university)?.bino)
-            setGuruh(listData[0][user?.study_level]?.find(i => i.country_ru === user?.country)?.universities.find(y => y.name_ru === user?.university)?.faculties.find(x => x?.name_ru === user?.facultet)?.guruh)
+            setGuruh(listData[0][user?.study_level]?.find(i => i.country_ru === user?.country)?.universities.find(y => y.name_ru === user?.university)?.facs?.[user?.study_type]?.find(x => x?.name_ru === user?.facultet)?.guruh)
         }
     }, [user])
 
@@ -146,10 +149,10 @@ const PDF = forwardRef(({pdf, type, language, user}, ref) => {
                             </div>
 
                             <div
-                                style={type ? { width: "80%" } : { width: "80%", fontSize: 15 }}
+                                style={type ? {width: "80%"} : {width: "80%", fontSize: 15}}
                             >
                                 {passportS[language]} :{" "}
-                                <span style={{ fontWeight: "bold", width: "60%" }}>
+                                <span style={{fontWeight: "bold", width: "60%"}}>
                                     {user?.passport_seria_number}
                                 </span>
                             </div>
@@ -249,7 +252,7 @@ const PDF = forwardRef(({pdf, type, language, user}, ref) => {
                             </List.Item>
                         </List>
                     </div>
-                    
+
                 </div>
 
                 <hr/>
@@ -296,7 +299,9 @@ const PDF = forwardRef(({pdf, type, language, user}, ref) => {
                             style={type ? {width: "50%"} : {fontSize: 16, width: "50%"}}
                         >
                             {"Ta'lim shakli"} :{" "}
-                            <span style={{fontWeight: "bold"}}>{user?.study_type}</span>
+                            <span style={{fontWeight: "bold"}}>
+                                {user?.study_type === "day" ? day[language] : night[language]}
+                            </span>
                         </List.Item>
                         <List.Item
                             style={type ? {width: "50%"} : {fontSize: 16, width: "50%"}}
@@ -344,21 +349,25 @@ const PDF = forwardRef(({pdf, type, language, user}, ref) => {
                         <br/>
                         <h5 style={{textAlign: "center"}}>Abiturientlarga eslatma!</h5>
                         <h5 style={{textAlign: "center"}}>
-                        O'zbekiston Respublikasi Prezidenti "O'zbekiston Respublikasi oliy ta'lim 2030 yil
-                            yordam rivozhlashtirish concept blue tasdiqlash tẞgrisida "2019 yil 8 oktoberdagi PF-5847-son
+                            O'zbekiston Respublikasi Prezidenti "O'zbekiston Respublikasi oliy ta'lim 2030 yil
+                            yordam rivozhlashtirish concept blue tasdiqlash tẞgrisida "2019 yil 8 oktoberdagi
+                            PF-5847-son
                             farmoni hamda “Oliy va urta mahsus talim tizimiga boshkaruvning yangi hodisalarini zhoriy
                             etish chora-tadbirlari tHgʻrisida”gi 2019 yil 11 yuldagi PQ-4391-son karorida qurish
                             vazifalar izhrosini ta'minlash, O'zbekiston Respublikasi va xorizhiy hamkor oliy
                             talim tashkilotlarining o'zaroi bo'yicha qo'shma talim dasturlari asosida talabalarni
-                            o'qitishni tashkil etish maksadida Vazirlar maxkamasi qabul qilingan O'zbekiston Respublikasi
+                            o'qitishni tashkil etish maksadida Vazirlar maxkamasi qabul qilingan O'zbekiston
+                            Respublikasi
                             vazirlar mahkamasining 2021 yil 6 yuldagi 421-sonli “O'zbekiston respublikasi va xorijiy
-                            homkor talim tashkilotlarining qo'shma talim dasturlari asosida ta'lim oliy ishlab chiqarish tashkil
+                            homkor talim tashkilotlarining qo'shma talim dasturlari asosida ta'lim oliy ishlab chiqarish
+                            tashkil
                             etish tartibi tạg'ilishda nizomni tasdiklash idagi” karorida xavfsizlik himoya amalgam
                             kengaytirilgan.
                             Xorijiy oliy ta'lim bilan hamkorlikdagi qo'shma talim dasturlariga imtixon
                             jarayonlari test kwrishda 2 bosqichda o'rnatish.
                             1-bosqichda texnikasi ywlishlari bwyich “Fizika-matematika”, texnologiya ywlishlari bwyich
-                            “Kimyo-matematika” fanlar bloklari bwyicha maksimal ballning 30% yoki twplagan abituriyentlar
+                            “Kimyo-matematika” fanlar bloklari bwyicha maksimal ballning 30% yoki twplagan
+                            abituriyentlar
                             2-bosqichga o'tkaziladi.
                             2-bosqichga oʻrnatish entrantlar Oʻzbekiston Respublikasi Vazirlar Mahkamasi huzuridaghi
                             DTM tomonidan horizhiy tillardan olgan hamkor universiteti o'qitish tilini inobatga
@@ -370,7 +379,7 @@ const PDF = forwardRef(({pdf, type, language, user}, ref) => {
                             Izoh
                         </h5>
                         <h5 style={{textAlign: "center"}}>
-                        Kushma ta'lim dasturlarida taxsil davlat talabalari o'qishlarini oliy ta'lim
+                            Kushma ta'lim dasturlarida taxsil davlat talabalari o'qishlarini oliy ta'lim
                             shaxsiyga kuchirish mumkin emas, foydalanish uchun xavfsizlik qo'shma talim
                             dasturlari bo'yicha o'qishni kuchirish yoki yunalishni o'zgartirish mumkin!!!
 

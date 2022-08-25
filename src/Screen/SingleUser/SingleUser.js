@@ -90,7 +90,7 @@ function SingleUser({ setUserName, language}) {
         }, 0)
     }
     const imgUploader = useRef()
-    console.log(user);
+
     return (
         <div>
             {loading ? <Spin className={'small-spin'} /> :
@@ -128,7 +128,7 @@ function SingleUser({ setUserName, language}) {
                                             onClick={handlePrint1}>
                                         To'lov varaqasi
                                     </Button>
-                                    
+
                                 </div>
                             </Form>
                         </div>
