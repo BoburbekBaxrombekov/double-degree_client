@@ -37,92 +37,37 @@ export const listData = [
                                         training_ru: "очное обучение",
                                         training_uz: "кундузги",
                                     },
+                                    {
+                                        guruh: 3,
+                                        name_uz: "Oziq-ovqat texnologiyasi (don mahsulotlari)",
+                                        name_ru: "Пищевая технология (зерновые продукты)",
+                                        subjects_uz: ["Kimyo", "Matematika", "Rus tili"],
+                                        subjects_ru: ["Химия»", "«Математика»", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Sirtqi',
+                                        time_ru: 'Внешне'
+                                    },
                                 ],
                                 night: [
                                     {
-                                        guruh: 1,
-                                        name_uz: "Oziq-ovqat texnologiyasi (non, makaron va qandolatchilik mahsulotlari)",
-                                        name_ru: "Пищевая технология (хлеб, макаронные и кондитерские изделия)",
-                                        subjects_uz: ["Kimyo", "Matematika", "Rus tili"],
-                                        subjects_ru: ["Химия», «Математика», «Русский язык"],
-                                        lang_ru: "Русский",
-                                        lang_uz: "Rus tili",
-                                        training_ru: "очное обучение",
-                                        training_uz: "кундузги",
-                                        time_uz: 'Kunduzgi',
-                                        time_ru: 'Дневное время',
-                                    },
-                                    {
-                                        guruh: 2,
-                                        name_uz: "Texnologik mashinalar va jihozlar (tarmoqlar boʼyicha)",
-                                        name_ru: "Технологические машины и оборудование (по сетям)",
+                                        // sirqi
+                                        guruh: 4,
+                                        name_uz: "Texnologik mashinalar va jihozlar(sovutish, kriogen texnikasi va moʼʼtadillash tizimlari mashinalari hamda agregatlari)",
+                                        name_ru: "Технологические машины и оборудование (машины и агрегаты холодильного, криогенного оборудования и систем замедления)",
                                         subjects_uz: ["Matematika", "Fizika", "Rus tili"],
-                                        subjects_ru: ["Математика", "Физика", "Русский язык"],
+                                        subjects_ru: ["«Математика»", "Физика", "Русский язык"],
                                         lang_ru: "Русский",
                                         lang_uz: "Rus tili",
                                         training_ru: "очное обучение",
                                         training_uz: "кундузги",
-                                        time_uz: 'Kunduzgi',
-                                        time_ru: 'Дневное время'
-                                    },
+                                        time_uz: 'Sirtqi',
+                                        time_ru: 'Внешне'
+                                    }
                                 ]
-                            },
-                            faculties: [
-                                {
-                                    guruh: 1,
-                                    name_uz: "Oziq-ovqat texnologiyasi (non, makaron va qandolatchilik mahsulotlari)",
-                                    name_ru: "Пищевая технология (хлеб, макаронные и кондитерские изделия)",
-                                    subjects_uz: ["Kimyo", "Matematika", "Rus tili"],
-                                    subjects_ru: ["Химия», «Математика», «Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время',
-                                },
-                                {
-                                    guruh: 2,
-                                    name_uz: "Texnologik mashinalar va jihozlar (tarmoqlar boʼyicha)",
-                                    name_ru: "Технологические машины и оборудование (по сетям)",
-                                    subjects_uz: ["Matematika", "Fizika", "Rus tili"],
-                                    subjects_ru: ["Математика", "Физика", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-
-                                },
-                                {
-                                    guruh: 3,
-                                    name_uz: "Oziq-ovqat texnologiyasi (don mahsulotlari)",
-                                    name_ru: "Пищевая технология (зерновые продукты)",
-                                    subjects_uz: ["Kimyo", "Matematika", "Rus tili"],
-                                    subjects_ru: ["Химия»", "«Математика»", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Sirtqi',
-                                    time_ru: 'Внешне'
-                                },
-                                {
-                                    // sirqi
-                                    guruh: 4,
-                                    name_uz: "Texnologik mashinalar va jihozlar(sovutish, kriogen texnikasi va moʼʼtadillash tizimlari mashinalari hamda agregatlari)",
-                                    name_ru: "Технологические машины и оборудование (машины и агрегаты холодильного, криогенного оборудования и систем замедления)",
-                                    subjects_uz: ["Matematika", "Fizika", "Rus tili"],
-                                    subjects_ru: ["«Математика»", "Физика", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Sirtqi',
-                                    time_ru: 'Внешне'
-                                }
-                            ],
+                            }
                         },
                         {
                             id: 12,
@@ -130,76 +75,81 @@ export const listData = [
                             name_ru: "Белорусский государственный технологический университет, Республика Беларусь",
                             bino: 1,
                             smena: 2,
-                            faculties: [
-                                {
-                                    guruh: 1,
-                                    name_uz: "Texnologik mashinalar va jihozlar (tarmoqlar boʼyicha)",
-                                    name_ru: "Технологические машины и оборудование (по сетям)",
-                                    subjects_uz: ["Matematika", "Fizika", "Rus tili"],
-                                    subjects_ru: ["«Математика»", "Физика", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                },
-                                {
-                                    guruh: 2,
-                                    name_uz: "Kimyoviy texnologiya (qurilish materiallar)",
-                                    name_ru: "Химическая технология (строительные материалы)",
-                                    subjects_uz: ["Kimyo", "Matematika", "Rus tili"],
-                                    subjects_ru: ["Химия»", "«Математика»", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                },
-                                {
-                                    //sirtqi
-                                    guruh: 3,
-                                    name_uz: "Texnologik mashinalar va jihozlar (tarmoqlar boʼyicha)",
-                                    name_ru: "Технологические машины и оборудование (по сетям)",
-                                    subjects_uz: ["Matematika", "Fizika", "Rus tili"],
-                                    subjects_ru: ["«Математика»", "Физика", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Sirtqi',
-                                    time_ru: 'Внешне'
-                                },
-                                {
-                                    //sirtqi
-                                    guruh: 4,
-                                    name_uz: "Kimyoviy texnologiya (ishlab chiqarish turlari boʼyicha)",
-                                    name_ru: "Химическая технология (по видам производства)",
-                                    subjects_uz: ["Kimyo", "Matematika", "Rus tili"],
-                                    subjects_ru: ["Химия»", "«Математика»", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Sirtqi',
-                                    time_ru: 'Внешне'
-                                },
-                                {
-                                    //sirtqi
-                                    guruh: 5,
-                                    name_uz: "Texnologik jarayonlar va ishlab chiqarishni avtomatlashtirish va boshqarish (tarmoqlar boʼyicha)",
-                                    name_ru: "Автоматизация и управление технологическими процессами и производством (по сетям)",
-                                    subjects_uz: ["Matematika", "Fizika", "Rus tili"],
-                                    subjects_ru: ["«Математика»", "Физика", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Sirtqi',
-                                    time_ru: 'Внешне'
-                                }
-                            ],
+                            facs: {
+                                day: [
+                                    {
+                                        guruh: 1,
+                                        name_uz: "Texnologik mashinalar va jihozlar (tarmoqlar boʼyicha)",
+                                        name_ru: "Технологические машины и оборудование (по сетям)",
+                                        subjects_uz: ["Matematika", "Fizika", "Rus tili"],
+                                        subjects_ru: ["«Математика»", "Физика", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    },
+                                    {
+                                        guruh: 2,
+                                        name_uz: "Kimyoviy texnologiya (qurilish materiallar)",
+                                        name_ru: "Химическая технология (строительные материалы)",
+                                        subjects_uz: ["Kimyo", "Matematika", "Rus tili"],
+                                        subjects_ru: ["Химия»", "«Математика»", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    },
+                                    
+                                ],
+                                night: [
+                                    {
+                                        //sirtqi
+                                        guruh: 3,
+                                        name_uz: "Texnologik mashinalar va jihozlar (tarmoqlar boʼyicha)",
+                                        name_ru: "Технологические машины и оборудование (по сетям)",
+                                        subjects_uz: ["Matematika", "Fizika", "Rus tili"],
+                                        subjects_ru: ["«Математика»", "Физика", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Sirtqi',
+                                        time_ru: 'Внешне'
+                                    },
+                                    {
+                                        //sirtqi
+                                        guruh: 4,
+                                        name_uz: "Kimyoviy texnologiya (ishlab chiqarish turlari boʼyicha)",
+                                        name_ru: "Химическая технология (по видам производства)",
+                                        subjects_uz: ["Kimyo", "Matematika", "Rus tili"],
+                                        subjects_ru: ["Химия»", "«Математика»", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Sirtqi',
+                                        time_ru: 'Внешне'
+                                    },
+                                    {
+                                        //sirtqi
+                                        guruh: 5,
+                                        name_uz: "Texnologik jarayonlar va ishlab chiqarishni avtomatlashtirish va boshqarish (tarmoqlar boʼyicha)",
+                                        name_ru: "Автоматизация и управление технологическими процессами и производством (по сетям)",
+                                        subjects_uz: ["Matematika", "Fizika", "Rus tili"],
+                                        subjects_ru: ["«Математика»", "Физика", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Sirtqi',
+                                        time_ru: 'Внешне'
+                                    }
+                                ]
+                            },
                         },
                         {
                             id: 13,
@@ -207,21 +157,26 @@ export const listData = [
                             name_ru: "Гродненский государственный университет имени Янки Купалы, Республика Беларусь",
                             bino: 2,
                             smena: 1,
-                            faculties: [
-                                {
-                                    guruh: 1,
-                                    name_uz: "Menejment oziq ovqat",
-                                    name_ru: "Управление питанием",
-                                    subjects_uz: ["Matematika", "Englis tili", "Rus tili"],
-                                    subjects_ru: ["«Математика»", "английский язык", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                }
-                            ],
+                            facs: {
+                                day: [
+                                    {
+                                        guruh: 1,
+                                        name_uz: "Menejment oziq ovqat",
+                                        name_ru: "Управление питанием",
+                                        subjects_uz: ["Matematika", "Englis tili", "Rus tili"],
+                                        subjects_ru: ["«Математика»", "английский язык", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    }
+                                ],
+                                night: [
+                                    
+                                ]
+                            },
                         },
                         {
                             id: 14,
@@ -229,48 +184,53 @@ export const listData = [
                             name_ru: "Республика Беларусь, Полоцкий государственный университет",
                             bino: 2,
                             smena: 2,
-                            faculties: [
-                                {
-                                    guruh: 1,
-                                    name_uz: "Mashinasozlik texnologiyasi, mashinasozlik ishlab chiqarishini jihozlash va avtomatlashtirish  ",
-                                    name_ru: "Машиностроительная технология, оборудование и автоматизация машиностроительного производства",
-                                    subjects_uz: ["Matematika", "Fizika", "Rus tili"],
-                                    subjects_ru: ["«Математика»", "Физика", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                },
-                                {
-                                    guruh: 2,
-                                    name_uz: "Neft va neft-gazni qayta ishlash texnologiyasi",
-                                    name_ru: "Технология переработки нефти и газа",
-                                    subjects_uz: ["Kimyo", "Matematika", "Rus tili"],
-                                    subjects_ru: ["Химия»", "«Математика»", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-
-                                },
-                                {
-                                    guruh: 3,
-                                    name_uz: "Neft va gaz quvurlari, baza va omborlarini qurish va ulardan foydalanish",
-                                    name_ru: "Строительство и эксплуатация нефте- и газопроводов, баз и складов",
-                                    subjects_uz: ["Kimyo", "Matematika", "Rus tili"],
-                                    subjects_ru: ["Химия»", "«Математика»", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                }
-                            ],
+                            facs: {
+                                day: [
+                                    {
+                                        guruh: 1,
+                                        name_uz: "Mashinasozlik texnologiyasi, mashinasozlik ishlab chiqarishini jihozlash va avtomatlashtirish  ",
+                                        name_ru: "Машиностроительная технология, оборудование и автоматизация машиностроительного производства",
+                                        subjects_uz: ["Matematika", "Fizika", "Rus tili"],
+                                        subjects_ru: ["«Математика»", "Физика", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    },
+                                    {
+                                        guruh: 2,
+                                        name_uz: "Neft va neft-gazni qayta ishlash texnologiyasi",
+                                        name_ru: "Технология переработки нефти и газа",
+                                        subjects_uz: ["Kimyo", "Matematika", "Rus tili"],
+                                        subjects_ru: ["Химия»", "«Математика»", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+    
+                                    },
+                                    {
+                                        guruh: 3,
+                                        name_uz: "Neft va gaz quvurlari, baza va omborlarini qurish va ulardan foydalanish",
+                                        name_ru: "Строительство и эксплуатация нефте- и газопроводов, баз и складов",
+                                        subjects_uz: ["Kimyo", "Matematika", "Rus tili"],
+                                        subjects_ru: ["Химия»", "«Математика»", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    }
+                                ],
+                                night: [
+                                    
+                                ]
+                            },
                         }
                     ]
             },
@@ -287,19 +247,24 @@ export const listData = [
                             smena: 2,
                             name_uz: "Latviya respublikasi, Latviya tabiiy fanlar va texnologiya universiteti",
                             name_ru: "Латвийский университет естественных наук и технологий, Латвийская Республика",
-                            faculties: [
-                                {
-                                    guruh: 1,
-                                    name_uz: "Oziq-ovqat texnologiyasi (mahsulot turlari boʼyicha)",
-                                    name_ru: "Пищевая технология (по видам продукции)",
-                                    subjects_uz: ["Kimyo", "Matematika", "Englis tili"],
-                                    subjects_ru: ["Химия»", "«Математика»", "английский язык"],
-                                    lang_ru: "английский язык",
-                                    lang_uz: "inglis tili",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                }
-                            ],
+                            facs: {
+                                day: [
+                                    {
+                                        guruh: 1,
+                                        name_uz: "Oziq-ovqat texnologiyasi (mahsulot turlari boʼyicha)",
+                                        name_ru: "Пищевая технология (по видам продукции)",
+                                        subjects_uz: ["Kimyo", "Matematika", "Englis tili"],
+                                        subjects_ru: ["Химия»", "«Математика»", "английский язык"],
+                                        lang_ru: "английский язык",
+                                        lang_uz: "inglis tili",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    }
+                                ],
+                                night: [
+                                    
+                                ]
+                            },
                         }
                     ]
             },
@@ -315,30 +280,35 @@ export const listData = [
                             name_ru: "Турция, Технический университет OSTIM",
                             bino: 4,
                             smena: 1,
-                            faculties: [
-                                {
-                                    guruh: 1,
-                                    name_uz: "Materialshunoslik va yangi material texnologiyasi (tarmoqlar bo'yicha)",
-                                    name_ru: "Материаловедение и технология новых материалов (по отраслям)",
-                                    subjects_uz: ["Matematika", "Kimyo", "Englis tili"],
-                                    subjects_ru: ["«Математика»", "Химия»", "английский язык"],
-                                    lang_ru: "английский язык",
-                                    lang_uz: "inglis tili",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                },
-                                {
-                                    guruh: 2,
-                                    name_uz: "Jarayonni boshqarish uchun axborot-kommunikatsiya tizimlari",
-                                    name_ru: "Информационно-коммуникационные системы для управления процессами",
-                                    subjects_uz: ["Matematika", "Fizika", "Englis tili"],
-                                    subjects_ru: ["«Математика»", "Физика", "английский язык"],
-                                    lang_ru: "английский язык",
-                                    lang_uz: "inglis tili",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                }
-                            ],
+                            facs: {
+                                day: [
+                                    {
+                                        guruh: 1,
+                                        name_uz: "Materialshunoslik va yangi material texnologiyasi (tarmoqlar bo'yicha)",
+                                        name_ru: "Материаловедение и технология новых материалов (по отраслям)",
+                                        subjects_uz: ["Matematika", "Kimyo", "Englis tili"],
+                                        subjects_ru: ["«Математика»", "Химия»", "английский язык"],
+                                        lang_ru: "английский язык",
+                                        lang_uz: "inglis tili",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    },
+                                    {
+                                        guruh: 2,
+                                        name_uz: "Jarayonni boshqarish uchun axborot-kommunikatsiya tizimlari",
+                                        name_ru: "Информационно-коммуникационные системы для управления процессами",
+                                        subjects_uz: ["Matematika", "Fizika", "Englis tili"],
+                                        subjects_ru: ["«Математика»", "Физика", "английский язык"],
+                                        lang_ru: "английский язык",
+                                        lang_uz: "inglis tili",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    }
+                                ],
+                                night: [
+                                    
+                                ]
+                            },
                         }
                     ]
             }],
@@ -355,45 +325,50 @@ export const listData = [
                             smena: 2,
                             name_uz: "Belarus Respublikasi, Belorussiya davlat texnologiya universiteti",
                             name_ru: "Белорусский государственный технологический университет, Республика Беларусь",
-                            faculties: [
-                                {
-                                    guruh: 1,
-                                    name_uz: "Kimyoviy texnologiya jarayonlari va apparatlari (ishlab chiqarish turi boʼyicha)",
-                                    name_ru: "Химико-технологические процессы и оборудование (по видам производства)",
-                                    subjects_uz: ["Mutahasislik fani", "Rus tili"],
-                                    subjects_ru: ["Специализация", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                },
-                                {
-                                    guruh: 2,
-                                    name_uz: "Yogʼochga ishlov berish texnologiyasi va yogʼochshunoslik",
-                                    name_ru: "Технология деревообработки и деревоведение",
-                                    subjects_uz: ["Mutahasislik fani", "Rus tili"],
-                                    subjects_ru: ["Специализация", "Русский язык"],
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                },
-                                {
-                                    guruh: 3,
-                                    name_uz: "Kimyoviy texnologiya(silikat va qiyin eriydigan nometall materiallar)",
-                                    name_ru: "Химическая технология (силикатные и трудноплавкие зеркальные материалы)",
-                                    subjects_uz: ["Mutahasislik fani", "Rus tili"],
-                                    subjects_ru: ["Специализация", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                }
-                            ],
+                            facs: {
+                                day: [
+                                    {
+                                        guruh: 1,
+                                        name_uz: "Kimyoviy texnologiya jarayonlari va apparatlari (ishlab chiqarish turi boʼyicha)",
+                                        name_ru: "Химико-технологические процессы и оборудование (по видам производства)",
+                                        subjects_uz: ["Mutahasislik fani", "Rus tili"],
+                                        subjects_ru: ["Специализация", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    },
+                                    {
+                                        guruh: 2,
+                                        name_uz: "Yogʼochga ishlov berish texnologiyasi va yogʼochshunoslik",
+                                        name_ru: "Технология деревообработки и деревоведение",
+                                        subjects_uz: ["Mutahasislik fani", "Rus tili"],
+                                        subjects_ru: ["Специализация", "Русский язык"],
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    },
+                                    {
+                                        guruh: 3,
+                                        name_uz: "Kimyoviy texnologiya(silikat va qiyin eriydigan nometall materiallar)",
+                                        name_ru: "Химическая технология (силикатные и трудноплавкие зеркальные материалы)",
+                                        subjects_uz: ["Mutahasislik fani", "Rus tili"],
+                                        subjects_ru: ["Специализация", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    }
+                                ],
+                                night: [
+                                    
+                                ]
+                            },
                         },
                         {
                             id: 18,
@@ -401,30 +376,35 @@ export const listData = [
                             smena: 1,
                             name_uz: "Belarus Respublikasi, Belorussiya davlat oziq-ovqat va kimyoviy texnologiya universiteti",
                             name_ru: "Белорусский государственный университет пищевых и химических технологий, Республика Беларусь",
-                            faculties: [
-                                {
-                                    name_uz: "Oziq-ovqat mahsulotlarini ishlab chiqarish va qayta ishlash texnologiyasi (mahsulot turlari boʼyicha)",
-                                    guruh: 1,
-                                    name_ru: "Технология производства и переработки пищевых продуктов (по видам продукции)",
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                },
-                                {
-                                    guruh: 2,
-                                    name_uz: "Oziq-ovqat sanoati mashinalari va agregatlari",
-                                    name_ru: "Машины и агрегаты пищевой промышленности",
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                }
-                            ],
+                            facs: {
+                                day: [
+                                    {
+                                        name_uz: "Oziq-ovqat mahsulotlarini ishlab chiqarish va qayta ishlash texnologiyasi (mahsulot turlari boʼyicha)",
+                                        guruh: 1,
+                                        name_ru: "Технология производства и переработки пищевых продуктов (по видам продукции)",
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    },
+                                    {
+                                        guruh: 2,
+                                        name_uz: "Oziq-ovqat sanoati mashinalari va agregatlari",
+                                        name_ru: "Машины и агрегаты пищевой промышленности",
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    }
+                                ],
+                                night: [
+                                    
+                                ]
+                            },
                         },
                         {
                             id: 19,
@@ -432,34 +412,39 @@ export const listData = [
                             smena: 2,
                             name_uz: "Belarus Respublikasi, Polotsk davlat ",
                             name_ru: "Республика Беларусь, Полоцкая область",
-                            faculties: [
-                                {
-                                    guruh: 1,
-                                    name_uz: "Neft va gazni qayta ishlash va kimyoviy texnologiyasi",
-                                    name_ru: "Нефтегазопереработка и химическая технология",
-                                    subjects_uz: ["Mutahasislik fani", "Rus tili"],
-                                    subjects_ru: ["Специализация", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                },
-                                {
-                                    guruh: 2,
-                                    name_uz: "Neft va gaz quvurlari, baza va omborlarini qurish va ulardan foydalanish",
-                                    name_ru: "Строительство и эксплуатация нефте- и газопроводов, баз и складов",
-                                    subjects_uz: ["Mutahasislik fani", "Rus tili"],
-                                    subjects_ru: ["Специализация", "Русский язык"],
-                                    lang_ru: "Русский",
-                                    lang_uz: "Rus tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                }
-                            ],
+                            facs: {
+                                day: [
+                                    {
+                                        guruh: 1,
+                                        name_uz: "Neft va gazni qayta ishlash va kimyoviy texnologiyasi",
+                                        name_ru: "Нефтегазопереработка и химическая технология",
+                                        subjects_uz: ["Mutahasislik fani", "Rus tili"],
+                                        subjects_ru: ["Специализация", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    },
+                                    {
+                                        guruh: 2,
+                                        name_uz: "Neft va gaz quvurlari, baza va omborlarini qurish va ulardan foydalanish",
+                                        name_ru: "Строительство и эксплуатация нефте- и газопроводов, баз и складов",
+                                        subjects_uz: ["Mutahasislik fani", "Rus tili"],
+                                        subjects_ru: ["Специализация", "Русский язык"],
+                                        lang_ru: "Русский",
+                                        lang_uz: "Rus tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    }
+                                ],
+                                night: [
+                                    
+                                ]
+                            },
                         }
                     ]
             },
@@ -475,21 +460,26 @@ export const listData = [
                             smena: 1,
                             name_uz: "Turkiya, OSTIM texnika universiteti",
                             name_ru: "Турция, Технический университет OSTIM",
-                            faculties: [
-                                {
-                                    guruh: 1,
-                                    name_uz: "Texnologik jarayonlar axborot-kommunikatsiya tizimlarini boshqarish",
-                                    name_ru: "Управление технологическими процессами информационно-коммуникационных систем",
-                                    subjects_uz: ["Mutahasislik fani", "Englis tili"],
-                                    subjects_ru: ["Специализация", "английский язык"],
-                                    lang_ru: "английский язык",
-                                    lang_uz: "inglis tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                }
-                            ],
+                            facs: {
+                                day: [
+                                    {
+                                        guruh: 1,
+                                        name_uz: "Texnologik jarayonlar axborot-kommunikatsiya tizimlarini boshqarish",
+                                        name_ru: "Управление технологическими процессами информационно-коммуникационных систем",
+                                        subjects_uz: ["Mutahasislik fani", "Englis tili"],
+                                        subjects_ru: ["Специализация", "английский язык"],
+                                        lang_ru: "английский язык",
+                                        lang_uz: "inglis tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    }
+                                ],
+                                night: [
+                                    
+                                ]
+                            },
                         }
                     ]
             },
@@ -505,21 +495,26 @@ export const listData = [
                             smena: 2,
                             name_uz: "Vengriya, Debretsen universiteti ",
                             name_ru: "Университет Дебрецена, Венгрия ",
-                            faculties: [
-                                {
-                                    guruh: 1,
-                                    name_uz: "Oziq-ovqat xavfsizligi va sifati",
-                                    name_ru: "Безопасность и качество пищевых продуктов",
-                                    subjects_uz: ["Mutahasislik fani", "Englis tili"],
-                                    subjects_ru: ["Специализация", "английский язык"],
-                                    lang_ru: "английский язык",
-                                    lang_uz: "inglis tili",
-                                    training_ru: "очное обучение",
-                                    training_uz: "кундузги",
-                                    time_uz: 'Kunduzgi',
-                                    time_ru: 'Дневное время'
-                                }
-                            ],
+                            facs: {
+                                day: [
+                                    {
+                                        guruh: 1,
+                                        name_uz: "Oziq-ovqat xavfsizligi va sifati",
+                                        name_ru: "Безопасность и качество пищевых продуктов",
+                                        subjects_uz: ["Mutahasislik fani", "Englis tili"],
+                                        subjects_ru: ["Специализация", "английский язык"],
+                                        lang_ru: "английский язык",
+                                        lang_uz: "inglis tili",
+                                        training_ru: "очное обучение",
+                                        training_uz: "кундузги",
+                                        time_uz: 'Kunduzgi',
+                                        time_ru: 'Дневное время'
+                                    }
+                                ],
+                                night: [
+                                    
+                                ]
+                            }
                         }
                     ]
             }
